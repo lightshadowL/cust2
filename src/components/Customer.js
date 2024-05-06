@@ -1,6 +1,8 @@
 import React from "react";
+import CustomerProfile from "./CustomerProfile";
+import CustomerInfo from "./CustomerInfo";
 
-class Customer extends React.Component{
+/* class Customer extends React.Component{
     render(){
         return(
             <div>
@@ -9,9 +11,9 @@ class Customer extends React.Component{
             </div>
         )
     }
-}
+} */
 
-class CustomerProfile extends React.Component{
+/* class CustomerProfile extends React.Component{
     render(){
         return (
             <div>
@@ -20,9 +22,9 @@ class CustomerProfile extends React.Component{
             </div>
         )
     }
-}
+} */
 
-class CustomerInfo extends React.Component{
+/* class CustomerInfo extends React.Component{
     render(){
         return (
             <div>
@@ -32,18 +34,24 @@ class CustomerInfo extends React.Component{
             </div>
         )
     }
-}
+} */
 
-/* const Customer = (props)=>{
+const Customer = (props)=>{
     console.log(props);
     return(
         <div>
-            <h2>{props.name}</h2>
-            <p>{props.birthday}</p>
-            <p>{props.gender}</p>
-            <p>{props.job}</p>
+            <CustomerProfile 
+                id={props.id}
+                image={props.image}
+                name={props.name}
+            />
+            <CustomerInfo
+                birthday={props.birthday}
+                gender={props.gender}
+                job={props.job}
+            />
         </div>
     )
-} */
+}
 
 export default Customer;
